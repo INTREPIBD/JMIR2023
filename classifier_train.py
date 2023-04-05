@@ -101,53 +101,6 @@ def main(args):
         shutil.rmtree(args.output_dir)
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
-    # import torch
-    # def kappa_loss(y_true, y_pred, num_classes, weightage):
-    #     EPS = torch.finfo(torch.float32).eps
-    #     label_vec = torch.arange(0, num_classes, dtype=torch.float32)
-    #     row_label_vec = torch.reshape(label_vec, [1, num_classes])
-    #     col_label_vec = torch.reshape(label_vec, [num_classes, 1])
-    #     col_mat = torch.tile(col_label_vec, [1, num_classes])
-    #     row_mat = torch.tile(row_label_vec, [num_classes, 1])
-    #     if weightage == "linear":
-    #         weight_mat = torch.abs(col_mat - row_mat)
-    #     else:
-    #         weight_mat = (col_mat - row_mat) ** 2
-    #
-    #     batch_size = y_true.shape[0]
-    #     cat_labels = torch.matmul(y_true, col_label_vec)
-    #     cat_label_mat = torch.tile(cat_labels, [1, num_classes])
-    #     row_label_mat = torch.tile(row_label_vec, [batch_size, 1])
-    #     if weightage == "linear":
-    #         weight = torch.abs(cat_label_mat - row_label_mat)
-    #     else:
-    #         weight = (cat_label_mat - row_label_mat) ** 2
-    #
-    #     numerator = torch.sum(weight * y_pred)
-    #     label_dist = torch.sum(y_true, dim=0, keepdim=True)
-    #     pred_dist = torch.sum(y_pred, dim=0, keepdim=True)
-    #     w_pred_dist = torch.matmul(weight_mat,
-    #                                torch.transpose(pred_dist, dim0=0,
-    #                                                dim1=1))
-    #     denominator = torch.sum(torch.matmul(label_dist, w_pred_dist))
-    #     denominator /= batch_size
-    #     loss = torch.nan_to_num(numerator / denominator, nan=0.0)
-    #     return torch.log(loss + EPS)
-    #
-    # y_true = torch.FloatTensor([[1, 0, 0, 0], [1, 0, 0, 0],
-    #                             [1, 0, 0, 0], [1, 0, 0, 0]])
-    # y_pred = torch.FloatTensor([[0.8, 0.05, 0.05, 0.1], [0.8, 0.05, 0.05, 0.1],
-    #                             [0.8, 0.05, 0.05, 0.1], [0.8, 0.05, 0.05, 0.1]])
-    # loss = kappa_loss(y_true=y_true, y_pred=y_pred, num_classes=4,
-    #                   weightage="quadratic")
-    #
-    # kappa_loss = tfa.losses.WeightedKappaLoss(num_classes=4,
-    #                                           weightage="quadratic")
-    # y_true = tf.constant([[1, 0, 0, 0], [1, 0, 0, 0],
-    #                      [1, 0, 0, 0], [1, 0, 0, 0]])
-    # y_pred = tf.constant([[0.8, 0.05, 0.05, 0.1], [0.8, 0.05, 0.05, 0.1],
-    #                             [0.8, 0.05, 0.05, 0.1], [0.8, 0.05, 0.05, 0.1]])
-    # loss = kappa_loss(y_true, y_pred)
 
     if args.mixed_precision:
         if args.verbose:

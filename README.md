@@ -1,6 +1,6 @@
 # Exploring digital biomarkers of illness activity in mood episodes: hypotheses generating and model development study.
 
-Code for paper [Exploring digital biomarkers of illness activity in mood episodes: hypotheses generating and model development study](https://preprints.jmir.org/preprint/45405/) published in JMIR mHealth and uHealth.
+Code for paper "[Exploring digital biomarkers of illness activity in mood episodes: hypotheses generating and model development study](https://preprints.jmir.org/preprint/45405/)" published in JMIR mHealth and uHealth.
 
 Authors: Gerard Anmella, Filippo Corponi*, Bryan M. Li*, Ariadna Mas, Miriam Sanabra, Isabella Pacchiarotti, Marc Valentí, Iria Grande, Antoni Benabarre,  Anna Giménez-Palomo, Marina Garriga, Isabel Agasi, Anna Bastidas, Myriam Cavero, Tabatha Fernández-Plaza, Nestor Arbelo, Miquel Bioque;  Clemente García-Rizo, Norma Verdolini, Santiago Madero, Andrea Murrru, Silvia Amoretti, Anabel Martínez-Aran, Victoria Ruiz, Giovanna Fico, Michele De Prisco, Vincenzo Oliva,  Aleix Solanes,  Joaquim Radua,  Ludovic Samalin,  Allan Young, Eduard Vieta, Antonio Vergari, Diego Hidalgo-Mazzei.
 ```
